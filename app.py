@@ -1,4 +1,5 @@
 import tkinter as tk
+#from tkinter import ttk #just for MACs
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -39,7 +40,41 @@ class Application(tk.Frame):
         self.setText.pack(side="right")
 
 
-        self.quit = tk.Button(self, text="QUIT", fg="red", command=root.destroy)
+        """
+        Der PACKER 
+        Es ist wichtig die hirarchie zu kennen um zu verstehen wie die Elemente automatisch angeordnet werden:
+        
+                         --------
+                        |   TK   |
+                        |  root  |
+                        |________|
+                             |
+                             |
+                        -----------
+                       |   Frame   |
+                       |    app    |
+                       |___________|
+                            /|\
+                            
+                        /    |     \
+                            
+                     /       |            \
+                           
+                /            |                     \
+         1----------         2----------         3----------
+        |   Button  |       |   Button  |       |   Button  |
+        | hi_there  |       |  getText  |       |  setText  |
+        |___________|       |___________|       |___________|
+        
+        
+        Der Branch "layout_demos" hat einige Beispiele für Layoutoptionen         
+        """
+
+        #ttk.Style().configure('red.TButton', foreground='red') #just for MACs
+        #self.quit = ttk.Button(self, text="QUIT", style='red.TButton',fg="red", command=root.destroy) #just for MACs
+
+        self.quit = tk.Button(self, text="QUIT", highlightbackground='#aa3311', fg="red", command=root.destroy)
+
         self.quit.pack(side="bottom")
 
     def get_string(self):
