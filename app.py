@@ -41,7 +41,11 @@ class Application(tk.Frame):
 
 
         """
+<<<<<<< HEAD
         Der PACKER 
+=======
+        Der PACKER
+>>>>>>> layout_demos
         Es ist wichtig die hirarchie zu kennen um zu verstehen wie die Elemente automatisch angeordnet werden:
         
                          --------
@@ -66,8 +70,12 @@ class Application(tk.Frame):
         | hi_there  |       |  getText  |       |  setText  |
         |___________|       |___________|       |___________|
         
+<<<<<<< HEAD
         
         Der Branch "layout_demos" hat einige Beispiele für Layoutoptionen         
+=======
+                 
+>>>>>>> layout_demos
         """
 
         #ttk.Style().configure('red.TButton', foreground='red') #just for MACs
